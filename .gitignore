@@ -1,0 +1,69 @@
+# Default Symfony2 Ignore List
+/web/bundles/
+/app/bootstrap.php.cache
+/app/cache/*
+/app/config/parameters.yml
+/app/logs/*
+!app/cache/.gitkeep
+!app/logs/.gitkeep
+/app/phpunit.xml
+/vendor/
+/bin/
+/composer.phar
+
+
+# Assetic auto-generated files
+/web/assetic/
+/web/css/
+/web/js/
+
+# Auto-generated php file backups
+*.php~
+
+# PhpStorm
+.idea
+
+# VisualStudioCode
+.vscode
+
+# macOS
+.DS_Store
+
+# Enuygun auto-generated folders
+/web/sitemap/*
+/web/cache/
+/src/Enuygun/FrontBundle/Resources/public
+/src/Enuygun/FrontBundle/Resources/sources
+/src/Enuygun/WebUiBundle/Resources/public/*
+!/src/Enuygun/WebUiBundle/Resources/public/.gitkeep
+
+/web/assets/*
+!/web/assets/**/.gitkeep
+
+# Ignore sample files for tests
+/src/Enuygun/*/Resources/samples/*
+
+# Exlude zip files
+!/src/Enuygun/*/Resources/samples/*.zip
+
+# Sphinx configuration
+app/config/sphinx.conf
+
+# Varnish configuration
+app/config/varnish.vcl
+
+# NetBeans specific files
+/nbproject/
+
+/node_modules/
+
+# Docker
+/.docker-sync/
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
