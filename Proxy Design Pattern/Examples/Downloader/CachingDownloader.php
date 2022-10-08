@@ -19,14 +19,13 @@ class CachingDownloader implements DownloaderContract
 
     public function download(string $url): string
     {
-        if (!isset($this->cache[$url])) {
-            echo "CacheProxy MISS. ";
-            $result = $this->downloader->download($url);
-            $this->cache[$url] = $result;
-        } else {
-            echo "Veri Cache üzerinden getiriliyor...\n";
+        if (isset($this->cache[$url])) {
             return $this->cache[$url];
         }
-        return $this->cache[$url];
+
+        $result = $this->downloader->download($url);
+        $this->cache[$url] = $result;
+
+        return $result;
     }
 }
