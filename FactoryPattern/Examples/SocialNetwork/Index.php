@@ -7,5 +7,5 @@ post(new LinkedinPoster());
 
 function post(SocialNetworkPoster $networkPoster)
 {
-    $networkPoster->post();
+    $networkPoster->post("Factory Pattern Content");
 }

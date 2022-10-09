@@ -19,9 +19,9 @@ class FacebookConnector implements Connector
         return $this;
     }
 
-    public function post(): Connector
+    public function post(string $content): Connector
     {
-        echo "facebook post uploaded.." . PHP_EOL;
+        echo "facebook post created with " . $content . PHP_EOL;
 
         return $this;
     }

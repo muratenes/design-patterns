@@ -5,13 +5,13 @@ abstract class SocialNetworkPoster
 
     public abstract function getConnection(): Connector;
 
-    public function post()
+    public function post(string $content)
     {
         $connection = $this->getConnection();
 
         $connection
             ->logIn()
-            ->post()
+            ->post($content)
             ->logOut();
     }
 }
