@@ -1,0 +1,16 @@
+{
+    "name": "murat.karabacak/php-examples",
+    "description": "Php Examples. Design Patterns,Redis...",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "murat.karabacak",
+            "email": "murat.karabacak@enuygun.com"
+        }
+    ],
+    "require": {}
+}
