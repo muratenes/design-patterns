@@ -8,9 +8,9 @@ class EmailNotification implements Notification
     {
     }
 
-    public function send(string $title, string $message)
+    public function send(string $title, string $message) : string
     {
         // mail($this->adminEmail, $title, $message);
-        echo "Sent email with title '$title' to '{$this->adminEmail}' that says '$message'.";
+        return "Sent email with title '$title' to '{$this->adminEmail}' that says '$message'.";
     }
 }

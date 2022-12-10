@@ -1,9 +1,10 @@
 <?php
 
-require __DIR__.'/../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 
 use App\DesignPatterns\AdapterPattern\Examples\Notification\EmailNotification;
+
 
 class Home
 {
@@ -18,6 +19,6 @@ class Home
         echo "asdasd";
         $notification = new EmailNotification("developers@example.com");
 
-        $notification->send("example title","hello from content");
+        $notification->send("example title", "hello from content");
     }
 }
