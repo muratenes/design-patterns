@@ -1,5 +1,9 @@
 <?php
 
+namespace App\DesignPatterns\FactoryPattern\Examples\SocialNetwork\Connectors;
+
+use App\DesignPatterns\FactoryPattern\Examples\SocialNetwork\Connector;
+
 class FacebookConnector implements Connector
 {
 

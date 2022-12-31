@@ -1,10 +1,12 @@
 <?php
 
+namespace App\DesignPatterns\FactoryPattern\Examples\SocialNetwork;
+
 interface Connector
 {
-    public function logIn(): self;
+    public function logIn(): Connector;
 
-    public function post(string $content): self;
+    public function post(string $content): Connector;
 
-    public function logOut(): self;
+    public function logOut(): Connector;
 }

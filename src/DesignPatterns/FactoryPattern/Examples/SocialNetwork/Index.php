@@ -1,11 +1,19 @@
 <?php
 
-require 'kernel.php';
+namespace App\DesignPatterns\FactoryPattern\Examples\SocialNetwork;
 
-post(new FacebookPoster("murat.karabacak@gmail.com", "1111111"));
-post(new LinkedinPoster());
 
-function post(SocialNetworkPoster $networkPoster)
+use App\DesignPatterns\FactoryPattern\Examples\SocialNetwork\Clients\FacebookPoster;
+
+class Index
 {
-    $networkPoster->post("Factory Pattern Content");
+    public function post(SocialNetworkPoster $networkPoster, string $message)
+    {
+        $networkPoster->post($message);
+    }
 }
+
+
+// Example USAGE
+// $poster = new FacebookPoster($this->faker->email, "11111111");
+// $poster->post("Example Content");

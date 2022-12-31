@@ -1,5 +1,8 @@
 <?php
 
+namespace App\DesignPatterns\FactoryPattern\Examples\SocialNetwork;
+
+
 abstract class SocialNetworkPoster
 {
 
