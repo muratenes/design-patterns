@@ -1,21 +1,24 @@
 <?php
 
-require 'kernel.php';
+namespace App\DesignPatterns\BuilderPattern\Examples\SQLQueryBuilder;
 
-function createQuery(QueryBuilderInterface $queryBuilder)
+class Index
 {
-    $query = $queryBuilder
-        ->select("users", ["name", "email", "password"])
-        ->where("age", 18, ">")
-        ->where("age", 30, "<")
-        ->limit(10, 20)
-        ->getSQL();
 
-    echo $query;
+    /**
+     * @param QueryBuilderInterface $queryBuilder
+     * @return string
+     */
+    public function createQuery(QueryBuilderInterface $queryBuilder): string
+    {
+        return $queryBuilder
+            ->select("users", ["name", "email", "password"])
+            ->where("age", 18, ">")
+            ->where("age", 30, "<")
+            ->limit(10, 20)
+            ->getSQL();
+    }
 }
 
-createQuery(new MysqlQueryBuilder());
-echo PHP_EOL . "----" . PHP_EOL;
-createQuery(new PostgresQueryBuilder());
-
-
+// example usage
+//createQuery(new MysqlQueryBuilder());

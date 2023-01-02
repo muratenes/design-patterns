@@ -1,6 +1,8 @@
 <?php
 
+namespace App\DesignPatterns\BuilderPattern\Examples\SQLQueryBuilder\Builders;
 
+use App\DesignPatterns\BuilderPattern\Examples\SQLQueryBuilder\QueryBuilderInterface;
 
 class MysqlQueryBuilder implements QueryBuilderInterface
 {
