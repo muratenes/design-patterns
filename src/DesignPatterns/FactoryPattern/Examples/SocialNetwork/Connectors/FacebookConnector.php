@@ -18,21 +18,21 @@ class FacebookConnector implements Connector
 
     public function logIn(): Connector
     {
-        echo "facebook logged with " . $this->email . PHP_EOL;
+        $log = "facebook logged with " . $this->email . PHP_EOL;
 
         return $this;
     }
 
     public function post(string $content): Connector
     {
-        echo "facebook post created with " . $content . PHP_EOL;
+        $log =  "facebook post created with " . $content . PHP_EOL;
 
         return $this;
     }
 
     public function logOut(): Connector
     {
-        echo "logout from facebook " . $this->email . PHP_EOL;
+        $log =  "logout from facebook " . $this->email . PHP_EOL;
 
         return $this;
     }
