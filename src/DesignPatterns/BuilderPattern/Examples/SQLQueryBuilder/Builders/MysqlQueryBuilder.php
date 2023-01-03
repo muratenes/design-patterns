@@ -44,11 +44,10 @@ class MysqlQueryBuilder implements QueryBuilderInterface
 
     public function getSql(): string
     {
-        $query = $this->query;
         $sql = $this->query->base;
 
-        if (!empty($query->where)) {
-            $sql .= " WHERE " . implode(' AND ', $query->where);
+        if (!empty($this->query->where)) {
+            $sql .= " WHERE " . implode(' AND ', $this->query->where);
         }
         if (!empty($this->query->limit)) {
             $sql .= $this->query->limit;
