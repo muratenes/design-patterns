@@ -30,3 +30,11 @@ ortam geçilir ve pattern ona göre ilgili payload oluşturur.
 
 2 - Construct üzerinden çok fazla veri alındığında kullanilabilir.
 
+
+Builder Pattern tarafından çözülen problemin tanımlanması kolaydır. Bu durumlarda kullanılmalıdır:
+
+- Uzun bir parametre listesine sahip bir oluşturucu kullanmak gerektiğinde veya 
+farklı parametrelere sahip uzun bir oluşturucu listesi olduğunda.
+- Aynı nesnenin farklı temsillerini oluşturmak gerektiğinde.
+Yani, farklı özelliklere sahip aynı sınıftaki nesnelere ihtiyaç duyulduğunda.
+
