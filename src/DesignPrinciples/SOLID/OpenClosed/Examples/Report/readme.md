@@ -50,3 +50,6 @@ class XmlReportFormatter implements ReportFormatter
 
 **ReportFormatter** adında interface oluşturduk ve tüm formatlama sınıflarımızı bu interface’ten implement ettik böylelikle
 gelişmeye açık değişikliğe kapalı olarak kod yazmış ve gereksiz değişikliklerden kurtulmuş olduk.
+
+
+> Source : https://engineering.teknasyon.com/solid-yaz%C4%B1l%C4%B1m-geli%C5%9Ftirme-prensipleri-php-42f26dfc91cd
