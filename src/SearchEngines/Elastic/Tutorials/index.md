@@ -2,11 +2,10 @@
 
 ### Index Data Update/Create/DELETE  Etme
 
-index oluşturma : `PUT books`
-
-update ve create işlemi için kullanılabilir.
+create index : `PUT books`
+update or create doc in below code:
 ```
-PUT books/doc/1
+PUT books/_doc/1with
 {
   "title" : "How to learn english",
   "page" : 300,
@@ -18,52 +17,20 @@ PUT books/doc/1
     "bio" : "Short bio for author"
   },
     "category" : [
-    "education",
+    "education",Indexed
     "software"
   ],
-  "created_at" : "12-02-2022 12:02:34",
-  "updated_at" : "12-02-2022 15:03:50"
+  "created_at" : "2022-03-01T12:10:30Z",
+  "updated_at" : "2022-05-01T12:10:30Z"
 }
+```
+
+**Get Index**
+```
+GET books/_doc/1
 ```
 **Delete Indexed Doc**
 
 ```
 DELETE books/doc/4
-```
-
-### Field Mapping 
-
-```
-PUT /books
-{
-  "mappings": {
-    "doc" : {
-      "properties" : {
-        "title" : {"type" : "text"},
-        "page" : {"type" : "short"},
-        "is_active" : {"type" : "double"},
-        "author" : {
-          "properties" : {
-            "id" : {"type" : "long"},
-            "name" : {"type" : "text"},
-            "image" : {"type" : "text"},
-            "bio" : {"type" : "text"}
-          }
-        },
-        "created_at" : {"type" : "date"},
-        "updated_at" : {"type" : "date"}
-      }
-    }
-  }
-}
-```
-> https://www.elastic.co/guide/en/elasticsearch/reference/8.6/mapping.html
-
-#### Get Mappings
-```
-GET /books/_mappings
-```
-- Field göre mapping getirme
-```
-GET /books/_mappings/
 ```
