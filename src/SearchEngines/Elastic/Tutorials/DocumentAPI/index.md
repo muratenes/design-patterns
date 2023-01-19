@@ -3,9 +3,12 @@
 ### Index Data Update/Create/DELETE  Etme
 
 create index : `PUT books`
-update or create doc in below code:
+
+book indexi içinde id 1 olan document güncelleme.
+Update işlemi sırasında sadece içerisinde gönderilen dataları kaydeder ve diğerleri silinir.
+
 ```
-PUT books/_doc/1with
+PUT books/_doc/1
 {
   "title" : "How to learn english",
   "page" : 300,
@@ -26,11 +29,13 @@ PUT books/_doc/1with
 ```
 
 **Get Index**
+
 ```
 GET books/_doc/1
 ```
+
 **Delete Indexed Doc**
 
 ```
-DELETE books/doc/4
+DELETE books/_doc/4
 ```
