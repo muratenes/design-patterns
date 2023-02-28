@@ -10,3 +10,4 @@ class Index
         $physicalBook = (new Director())->createPhysicalBook();
     }
 }
+
